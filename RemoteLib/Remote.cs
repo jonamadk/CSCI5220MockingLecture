@@ -1,4 +1,5 @@
 ﻿
+
 namespace RemoteLib
 {
     public class Remote
@@ -12,7 +13,22 @@ namespace RemoteLib
 
         public void ToggleDevicePower()
         {
-            _device.TurnOn();
+            if (_device.IsOn())
+            {
+                _device.TurnOff();
+            }
+            else
+            {
+                _device.TurnOn();
+            }
+        }
+
+        public void VolumeUp(int volumeIncrement)
+        {
+            if (_device.IsOn())
+            {
+                _device.VolumeUp(volumeIncrement);
+            }
         }
     }
 }

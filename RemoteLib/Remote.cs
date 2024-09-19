@@ -23,6 +23,11 @@ namespace RemoteLib
             }
         }
 
+        /// <summary>
+        /// Mocking for the volumeIncrement
+        /// </summary>
+        /// <param name="volumeIncrement"></param>
+
         public void VolumeUp(int volumeIncrement)
         {
             if (_device.IsOn())
